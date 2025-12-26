@@ -1,16 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 
 const Github = () => {
-  const [data, setdata] = useState([]);
-
-  useEffect(() => {
-    fetch("https://api.github.com/users/smarikaa17")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setdata(data);
-      });
-  }, []);
+    const data= useLoaderData();
 
   return (
     <div className="flex flex-col justify-center items-center text-center m-4 bg-gray-400 p-4  text-2xl text-white">
@@ -24,5 +15,4 @@ const Github = () => {
     </div>
   );
 };
-
-export default Github;
+export default Github
