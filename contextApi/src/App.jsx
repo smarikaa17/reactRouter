@@ -1,9 +1,11 @@
+import Profile from "./Components/Profile";
 import UserContextProvider from "./Context/UserContextProvider";
-
+import Login from "./Components/Login"
 function App() {
   return (
     <UserContextProvider>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Login/>
+      <Profile/>
     </UserContextProvider>
   );
 }
